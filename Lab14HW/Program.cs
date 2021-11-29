@@ -23,7 +23,7 @@ namespace Lab14HW
     }
     abstract class Animal
     {
-        public string Name { get; set; }
+        public abstract string Name { get; set; }
         public abstract void Say();
         public Animal()
         {
@@ -40,6 +40,7 @@ namespace Lab14HW
 
         public class Cat : Animal
         {
+            public override string Name { get; set; }
             public Cat(string name)
                 : base()
             {
@@ -62,6 +63,7 @@ namespace Lab14HW
 
         public class Dog : Animal
         {
+            public override string Name { get; set; }
             public Dog(string name)
                 : base()
 
