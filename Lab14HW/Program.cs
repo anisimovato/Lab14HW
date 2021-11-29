@@ -10,16 +10,13 @@ namespace Lab14HW
     {
         static void Main(string[] args)
         {
-           
-            Cat cat = new Cat();
-            Cat cat1 = new Cat("Мурка");
-            Dog dog = new Dog();
-            Dog dog1 = new Dog("Полкан");
 
+
+            Cat cat = new Cat("Мурка");
+            Dog dog = new Dog("Полкан");
             dog.ShowInfo();
-            dog1.ShowInfo();
             cat.ShowInfo();
-            cat1.ShowInfo();
+
             Console.ReadKey();
 
         }
@@ -30,6 +27,7 @@ namespace Lab14HW
         public abstract void Say();
         public Animal()
         {
+           
         }
         public void ShowInfo()
         {
@@ -40,21 +38,21 @@ namespace Lab14HW
 
 
 
-        class Cat : Animal
+        public class Cat : Animal
         {
             public Cat(string name)
+                : base()
             {
-                Name = "Кошка";
-                
+                Name = name;
+
             }
             public override void Say()
             {
                 Console.WriteLine("Мяу");
             }
-            public new void ShowInfo()
+            public Cat()
+                : base()
             {
-                Console.WriteLine(Name); Say();
-                Console.ReadKey();
             }
         }
 
@@ -62,21 +60,22 @@ namespace Lab14HW
 
 
 
-        class Dog : Animal
+        public class Dog : Animal
         {
             public Dog(string name)
+                : base()
+
             {
-                Name = "Пес";
-                
+                Name = name;
+
             }
             public override void Say()
             {
                 Console.WriteLine("Гав");
             }
-               public new void ShowInfo()
-            {
-                Console.Write(Name); Say();
-                Console.ReadKey();
+            public Dog()
+                : base()
+            { 
             }
 
         }
