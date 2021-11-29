@@ -12,7 +12,14 @@ namespace Lab14HW
         {
            
             Cat cat = new Cat();
+            Cat cat1 = new Cat("Мурка");
             Dog dog = new Dog();
+            Dog dog1 = new Dog("Полкан");
+
+            dog.ShowInfo();
+            dog1.ShowInfo();
+            cat.ShowInfo();
+            cat1.ShowInfo();
             Console.ReadKey();
 
         }
@@ -26,7 +33,8 @@ namespace Lab14HW
         }
         public void ShowInfo()
         {
-            Console.WriteLine(Name); Say();
+            Console.WriteLine(Name);
+            Say();
         }
 
 
