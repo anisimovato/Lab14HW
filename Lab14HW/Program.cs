@@ -21,68 +21,68 @@ namespace Lab14HW
 
         }
     }
-    abstract class Animal
+    public abstract class Animal
     {
         public abstract string Name { get; set; }
         public abstract void Say();
         public Animal()
         {
-           
+
         }
         public void ShowInfo()
         {
             Console.WriteLine(Name);
             Say();
         }
+    }
 
 
 
-
-        public class Cat : Animal
+    public class Cat : Animal
+    {
+        public override string Name { get; set; }
+        public Cat(string name)
+            : base()
         {
-            public override string Name { get; set; }
-            public Cat(string name)
-                : base()
-            {
-                Name = name;
+            Name = name;
 
-            }
-            public override void Say()
-            {
-                Console.WriteLine("Мяу");
-            }
-            public Cat()
-                : base()
-            {
-            }
         }
-
-
-
-
-
-        public class Dog : Animal
+        public override void Say()
         {
-            public override string Name { get; set; }
-            public Dog(string name)
-                : base()
-
-            {
-                Name = name;
-
-            }
-            public override void Say()
-            {
-                Console.WriteLine("Гав");
-            }
-            public Dog()
-                : base()
-            { 
-            }
-
+            Console.WriteLine("Мяу");
+        }
+        public Cat()
+            : base()
+        {
         }
     }
+
+
+
+
+
+    public class Dog : Animal
+    {
+        public override string Name { get; set; }
+        public Dog(string name)
+            : base()
+
+        {
+            Name = name;
+
+        }
+        public override void Say()
+        {
+            Console.WriteLine("Гав");
+        }
+        public Dog()
+            : base()
+        {
+        }
+
+    }
 }
+
 
 
 
