@@ -11,6 +11,10 @@ namespace Lab14HW
         static void Main(string[] args)
         {
            
+            Cat cat = new Cat();
+            Dog dog = new Dog();
+            Console.ReadKey();
+
         }
     }
     abstract class Animal
@@ -33,6 +37,7 @@ namespace Lab14HW
             public Cat(string name)
             {
                 Name = "Кошка";
+                
             }
             public override void Say()
             {
@@ -54,6 +59,7 @@ namespace Lab14HW
             public Dog(string name)
             {
                 Name = "Пес";
+                
             }
             public override void Say()
             {
